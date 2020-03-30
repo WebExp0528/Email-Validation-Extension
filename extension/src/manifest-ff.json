@@ -1,0 +1,41 @@
+{
+  "name": "__MSG_appName__",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "__MSG_appDescription__",
+  "icons": {
+    "16": "assets/icons/icon-16.png",
+    "48": "assets/icons/icon-48.png",
+    "128": "assets/icons/icon-128.png"
+  },
+  "default_locale": "en",
+  "content_scripts": [
+    {
+      "matches": [
+        "http://mail.google.com/*",
+        "https://mail.google.com/*",
+        "https://inbox.google.com/*"
+      ],
+      "js": ["assets/inboxsdk.js", "content/content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background/background.js"]
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage",
+    "http://mail.google.com/*",
+    "https://mail.google.com/*",
+    "https://api.neverbounce.com/*"
+  ],
+  "options_ui": {
+    "page": "options/index.html"
+  },
+  "applications": {
+    "gecko": {
+      "id": "example@example.com"
+    }
+  }
+}

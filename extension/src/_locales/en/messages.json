@@ -1,0 +1,14 @@
+{
+  "appName": {
+    "message": "Email Validation Extension",
+    "description": "Email Validation Extension"
+  },
+  "appDescription": {
+    "message": "Email Validation Extension",
+    "description": "The description of the extension."
+  },
+  "btnTooltip": {
+    "message": "Ext Starter",
+    "description": "Tooltip for the button."
+  }
+}
