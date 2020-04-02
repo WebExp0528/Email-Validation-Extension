@@ -1,0 +1,27 @@
+// Include header
+include ../includes/header.pug
+// Yield Page Content
+nav.navbar.fixed-top.navbar-expand-sm.bg-primary.navbar-dark
+    div.container
+        <!-- Brand/logo -->
+        a.navbar-brand(href="/")
+            img(src="bird.jpg" alt="logo" style="width:40px")
+
+        <!-- Links -->
+        ul.nav.navbar-nav
+            li.nav-item
+                a.nav-link(href="/") Home
+            if isAuthed
+                li.nav-item
+                    a.nav-link(href="/dashboard") DashBoard
+                li.nav-item
+                    a.nav-link(href="/profile") Profile
+                li.nav-item
+                    a.nav-link(href="/auth/sign-out") Sign Out
+            else
+                li.nav-item
+                    a.nav-link(href="/auth") Sign In
+div.page-container
+    block content
+// Include footer
+include ../includes/footer.pug
