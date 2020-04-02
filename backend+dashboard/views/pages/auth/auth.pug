@@ -1,0 +1,59 @@
+extends ../../layouts/app
+
+block content
+    div.container.pt-3
+        div.row
+            h2 Fancy Login / Registration form
+    br
+    br
+    div.container
+        div.row
+            div.col-md-4.col-md-offset-4
+                div.form-body.auth-form
+                    ul.nav.nav-tabs.final-login
+                        li.nav-item
+                            a.nav-link.active#showSectionA(data-toggle="tab" href="#sectionA") Sign In
+                        li.nav-item
+                            a.nav-link#showSectionB(data-toggle="tab" href="#sectionB") Join us!
+                    div.mt-3
+                        if messages.length
+                            .alert.alert-danger
+                                each msg in messages
+                                    p #{msg}
+                    div.tab-content
+                        div#sectionA.tab-pane.fade.show.active(role="tabpanel")
+                            div.innter-form
+                                form.sa-innate-form(method="post" action="/auth/local-sign-in")
+                                    label Email Address
+                                    input(type="text" name="email")
+                                    label Password
+                                    input(type="password" name="password")
+                                    button.btn-fb-blue(type="submit") Sign In
+                            //- div.social-login
+                            //-     p - - - - - - - - - - - - - Sign In With - - - - - - - - - - - - -
+                            //-     ul
+                            //-         li
+                            //-             a.google-btn(href="http://localhost:3000/auth/google")
+                            //-                 i.fa.fa-google-plus
+                            //-                 | Google+
+                            div.clearfix
+                        div#sectionB.tab-pane.fade(role="tabpanel")
+                            div.innter-form
+                                form.sa-innate-form(method="post", action="/auth/local-sign-up")
+                                    label Name
+                                    input(type="text", name="name")
+                                    label   Email Address
+                                    input(type="text", name="email")
+                                    label Password
+                                    input(type="password", name="password")
+                                    label Confirm Password
+                                    input(type="password", name="confirmPassword")
+                                    button.btn-fb-blue(type="submit") Join now
+                                    p By clicking Join now, you agree to hifriends's User Agreement, Privacy Policy, and Cookie Policy.
+                            //- div.social-login
+                            //-     p - - - - - - - - - - - - - Sign In With - - - - - - - - - - - - -
+                            //-         ul
+                            //-             li
+                            //-                 a.google-btn(href="http://localhost:3000/auth/google")
+                            //-                     i.fa.fa-google-plus
+                            //-                     | Google+

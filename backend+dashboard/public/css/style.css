@@ -1,0 +1,153 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+/*for fixed footer  /start */
+.page-container {
+  min-height: calc(100vh - 120px);
+  padding-top: 60px;
+}
+footer {
+  height: 120px;
+  box-sizing: border-box;
+  background: #263453;
+  color: white;
+  padding-top: 42px;
+}
+.footer-content-container {
+  margin: 0px auto;
+  width: 40%;
+  text-align: center;
+}
+/*for fixed footer  /end */
+
+/* auth page /start */
+
+/* form */
+.form-body {
+  background: #fff;
+  padding: 20px;
+}
+.login-form {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-top: 3px solid#3e4043;
+}
+.innter-form {
+  padding-top: 20px;
+}
+.final-login li {
+  width: 50%;
+}
+
+.auth-form .nav-tabs {
+  border-bottom: none !important;
+}
+
+.auth-form .nav-tabs > li {
+  color: #222 !important;
+}
+.auth-form .nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: #fff;
+  background-color: #d14d42;
+  border: none !important;
+  border-bottom-color: transparent;
+  border-radius: none !important;
+}
+.auth-form .nav-tabs > li > a {
+  margin-right: 2px;
+  line-height: 1.428571429;
+  border: none !important;
+  border-radius: none !important;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.social-login {
+  text-align: center;
+  font-size: 12px;
+}
+.social-login p {
+  margin: 15px 0;
+}
+.social-login ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.social-login ul li a {
+  font-size: 13px;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 0;
+  display: block;
+}
+.sa-innate-form input[type="text"],
+input[type="password"],
+input[type="file"],
+textarea,
+select,
+email {
+  font-size: 13px;
+  padding: 10px;
+  border: 1px solid#ccc;
+  outline: none;
+  width: 100%;
+  margin: 8px 0;
+}
+.sa-innate-form input[type="submit"] {
+  border: 1px solid#e64b3b;
+  background: #e64b3b;
+  color: #fff;
+  padding: 10px 25px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.sa-innate-form input[type="submit"]:hover {
+  border: 1px solid#db3b2b;
+  background: #db3b2b;
+  color: #fff;
+}
+
+.sa-innate-form button {
+  color: #fff;
+  padding: 10px 25px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.sa-innate-form button:hover {
+  color: #fff;
+}
+.sa-innate-form p {
+  font-size: 13px;
+  padding-top: 10px;
+}
+.btn-fb-blue {
+  background: #3b5998;
+  border-color: #3b5998;
+}
+.btn-twitter-blue {
+  background: #3698d9;
+  border-color: #3698d9;
+}
+.btn-twitter-blue:hover,
+.btn-fb-blue:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+.btn-google-red,
+.google-btn {
+  background: #e74c3d;
+  border-color: #e74c3d;
+}
+.google-btn {
+  margin: 0px auto;
+}
+.auth-form .nav-link.active {
+  color: #ffffff !important;
+  background: #d14d42 !important;
+  border-color: #d14d42 !important;
+}
+/* auth page /end */

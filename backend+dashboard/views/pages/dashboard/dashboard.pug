@@ -1,0 +1,63 @@
+extends ../../layouts/app
+
+block styles
+    link(href='/css/example.css', rel='stylesheet')
+
+block content
+    .container
+        .row
+            .col-md-6
+                .row.justify-content-between.align-items-end
+                    .col
+                        h3.mt-3 Domain Approved List
+                .row.justify-content-between.align-items-end
+                    .col-sm-12
+                        .input-group.mb-3
+                            input.form-control.inputDomain(type="text" placeholder="e.g: @gmail.com,@hotmail.com..." aria-label="e.g: @gmail.com,@hotmail.com..." aria-describedby="basic-addon2")
+                            .input-group-append
+                                button.btn.btn-success.addDomain(onClick="addDomain()" disabled) Add Domains
+                table.table.table-striped.table-dark.table-bordered#domain-approved-table
+                    thead
+                        tr
+                            th(scope="col") No.
+                            th(scope="col") Domains
+                            th(scope="col") Status
+                    tbody
+                        - for (var i = 0; i < domainApprovedList.length; i++) {
+                            //- tr(class=(domainApprovedList[i].status)?"table-success":"table-danger")
+                            tr
+                                td.number1(scope="row")= i+1
+                                td= domainApprovedList[i].domain
+                                td= (domainApprovedList[i].status)?"Approved":"Blocked"
+                                td(style="display:none")= domainApprovedList[i]._id
+                        - }
+            .col-md-6
+                .row.justify-content-between.align-items-end
+                    .col
+                        h3.mt-3 Recent Search List
+                .row.justify-content-between.align-items-end
+                    .col-sm-12
+                        .input-group.mb-3
+                            input.form-control.inputEmail(type="text" placeholder="e.g: example1@gmail.com,example1@hotmail.com..." aria-label="e.g: example1@gmail.com,example1@hotmail.com..." aria-describedby="basic-addon2")
+                            .input-group-append
+                                button.btn.btn-success.addEmail(onClick="addEmail()" disabled) Add Emails
+                table.table.table-striped.table-dark.table-bordered#recent-search-table
+                    thead
+                        tr
+                            th(scope="col") No.
+                            th(scope="col") Email
+                            th(scope="col") Expire Date
+                    tbody
+                        - for (var i = 0; i < recentSearchList.length; i++) {
+                            //- tr(class=(domainApprovedList[i].status)?"table-success":"table-danger")
+                            tr
+                                td.number2(scope="row")= i+1
+                                td= recentSearchList[i].email
+                                td= (recentSearchList[i].expire?recentSearchList[i].expire:"Undefined")
+                                td(style="display:none")= recentSearchList[i]._id
+                        - }
+block scripts
+    script(src="/js/jquery.tabledit.min.js")
+    script(src="/js/example.js")
+    
+
